@@ -1,0 +1,16 @@
+<ion-view view-title="Infos pratiques">
+  <ion-content>
+    <h1>Informations Pratiques</h1>
+    <ng-map style= "height : 620px" center="[48.816711, 2.829666]">
+        <marker id="foo" position="[48.816711, 2.829666]" on-click="map.showInfoWindow('MaMaison')"></marker>
+
+        <info-window id="MaMaison" visible-on-marker="foo">
+        <div ng-non-bindable>
+          <card title="'CHEZ MOI'">
+              <p>11 Boulevard du Nord</p>
+          </card>
+        </div>
+      </info-window>
+    </ng-map>
+  </ion-content>
+</ion-view>

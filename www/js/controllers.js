@@ -52,5 +52,11 @@ angular.module('starter.controllers', [])
   ];
 })
 
+.controller('MapCtrl', function($scope, NgMap) {
+  NgMap.getMap().then(function(map) {
+    $scope.map = map;
+  });
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
