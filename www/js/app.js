@@ -74,7 +74,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMap'])
           templateUrl: 'templates/scores.html'
         }
       }
-    })
+    });
   
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/accueil');
