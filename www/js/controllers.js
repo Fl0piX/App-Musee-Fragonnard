@@ -9,11 +9,11 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('apiCtrl', function($scope, $http) {
+.controller('questionCtrl', function($scope, $http) {
     $http({
       method: 'GET',
       url: 'api.php'
     }).then(function successCallback(response) {
-      $scope.api = response.data;
+      $scope.question = response.data;
     });
-)};
+});
