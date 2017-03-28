@@ -1,5 +1,19 @@
 <ion-view view-title="Quizz">
   <ion-content>
     <h1>Testez vos connaissances !</h1>
+    <ion-list>
+      <form action="">
+      <ion-item ng-repeat="question in quizz">
+        {{question.idquestion}}
+        {{question.question_intitule}}
+        {{question.question_idphoto}}
+          <input type="radio" name="{{question.idquestion}}" value="repfausse">{{question.question_repfausse}}<br>
+          <input type="radio" name="{{question.idquestion}}" value="repvraie">{{question.question_repvraie}}<br>
+
+      </ion-item>
+
+        <input type="submit" name="submit" content="Valider">
+      </form>
+    </ion-list>
   </ion-content>
 </ion-view>

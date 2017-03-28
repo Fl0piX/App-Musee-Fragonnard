@@ -9,11 +9,20 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('apiCtrl', function($scope, $http) {
+.controller('QuizzCtrl', function($scope, $http) {
     $http({
-      method: 'GET',
-      url: 'api.php'
+        method: 'GET',
+        url: 'http://localhost/api/api.php'
     }).then(function successCallback(response) {
-      $scope.api = response.data;
+        $scope.quizz = response.data;
+    })
+})
+
+.controller('QuestionCtrl', function($scope, $http, $stateParams){
+    $http({
+        method:'GET',
+        url: 'http://localhost/api/api.php' + $stateParams.idquestion
+    }).then(function successCallback(response){
+        $scope.question = response.data;
     });
-)};
+});
