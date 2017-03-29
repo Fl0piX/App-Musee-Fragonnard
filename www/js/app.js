@@ -64,11 +64,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMap'])
       views: {
         'menuContent': {
           templateUrl: 'templates/quizz.html',
-<<<<<<< HEAD
+
             controller:'QuizzCtrl'
-=======
-            controller: 'questionCtrl'
->>>>>>> 6d7a7fa3ec3da734ff720c89b8e08905c22462ba
+
         }
       }
     })
